@@ -3,6 +3,7 @@ import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom' 
 import MainContent from './pages/MainContent.tsx' 
+import LoggTemplate from './pages/logs.tsx'
 
 const routes = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const routes = createBrowserRouter([
       {
         path: '/chat',
         element: <MainContent />,
+      }, 
+      {
+        path: '/logs',
+        element: <LoggTemplate />,
       }, 
     ]
   }

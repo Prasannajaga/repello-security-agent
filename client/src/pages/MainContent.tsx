@@ -159,9 +159,9 @@ const MainContent: React.FC = () => {
   return (
  <div className="container h-auto relative mx-auto flex flex-col items-center">
     {/* Title moved closer to message area for better hierarchy */}
-    <h2 className="text-[#0d141c] dark:text-gray-100 tracking-tight text-[28px] font-bold leading-tight px-4 text-center pt-5 pb-2">
-      How can I help you today?
-    </h2>
+    <h5 className="text-[#0d141c] dark:text-gray-100 tracking-tight text-[20px] font-bold leading-tight px-4 text-center pt-5 pb-2">
+      Ask anything about your document. I’ll keep it safe!
+    </h5>
 
     {/* Message area with adjusted max-width for better alignment with input */}
     <div className="w-full max-w-5xl mx-auto flex-1">

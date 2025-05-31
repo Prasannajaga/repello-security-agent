@@ -15,8 +15,8 @@ const Sidebar: React.FC = () => {
       ),
     },
     {
-      label: 'History',
-      path : "/history", 
+      label: 'Logs',
+      path : "/logs", 
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
           <path
