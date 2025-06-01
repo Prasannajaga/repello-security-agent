@@ -221,7 +221,7 @@ To configure the application, you may need to set environment variables.
 ### **Backend**
 Create a `.env` file in the `server` directory with the following (modify as needed):
 ``` 
-GOOGLE_API_KEY="your-api-key" 
+GENAI_GOOGLE_API_KEY="your-api-key" 
 ```
 
 ### **Frontend**

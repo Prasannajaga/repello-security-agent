@@ -310,3 +310,88 @@
 2025-06-01 10:10:02,054 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
 2025-06-01 10:10:06,182 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
 2025-06-01 10:10:06,182 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 12:58:48,643 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 12:58:48,643 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 12:58:48,696 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 12:58:51,793 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-06-01 13:00:09,343 - app.template.promptTemplate - INFO - No file provided, using query only -> Hello
+2025-06-01 13:00:09,346 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:00:10,795 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-06-01 13:01:11,242 - app.template.promptTemplate - INFO - No file provided, using query only -> hi
+2025-06-01 13:01:11,242 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:01:12,675 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-06-01 13:02:19,982 - app.template.promptTemplate - INFO - No file provided, using query only -> hello
+2025-06-01 13:02:19,984 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:02:21,416 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-06-01 13:02:46,708 - app.template.promptTemplate - INFO - No file provided, using query only -> hi
+2025-06-01 13:02:46,710 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:02:48,958 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:02:48,958 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:02:56,508 - app.template.promptTemplate - INFO - No file provided, using query only -> Hllo
+2025-06-01 13:02:56,509 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:02:58,406 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:02:58,406 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:03:12,473 - app.template.promptTemplate - INFO - No file provided, using query only -> Hello
+2025-06-01 13:03:12,474 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:03:14,567 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:03:14,568 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:03:34,096 - app.template.promptTemplate - INFO - No file provided, using query only -> hi
+2025-06-01 13:03:34,097 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:03:36,266 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:03:36,277 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:04:18,795 - app.template.promptTemplate - INFO - No file provided, using query only -> hi
+2025-06-01 13:04:18,795 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:04:20,962 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:04:20,962 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:04:54,336 - app.template.promptTemplate - INFO - No file provided, using query only -> Hi good morning!
+2025-06-01 13:04:54,336 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:04:56,358 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:04:56,358 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:05:53,466 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 13:05:53,468 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 13:05:53,482 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:05:59,088 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:05:59,099 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:13:32,163 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 13:13:32,163 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 13:13:32,180 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:13:40,529 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:13:40,533 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:14:32,892 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 13:14:32,892 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 13:14:32,900 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:14:38,575 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:14:38,575 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:27:39,731 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 13:27:39,732 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 13:27:39,735 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:27:44,842 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:27:44,843 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 13:29:07,476 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 13:29:07,477 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 13:29:07,488 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 13:29:11,844 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 13:29:11,847 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 16:01:46,303 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 16:01:46,306 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 16:01:46,321 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 16:01:51,233 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 16:01:51,233 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 16:03:10,712 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 16:03:10,716 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 16:03:10,738 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 16:03:15,609 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 16:03:15,609 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 16:03:55,993 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 16:03:55,993 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 16:03:56,002 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 16:04:00,257 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 16:04:00,260 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 16:06:42,234 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 16:06:42,235 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 16:06:42,249 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 16:06:48,185 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 16:06:48,185 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 16:33:47,604 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 16:35:31,228 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 16:37:30,103 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.

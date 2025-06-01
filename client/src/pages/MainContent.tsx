@@ -140,7 +140,7 @@ const MainContent: React.FC = () => {
         if (status === 413 || status === 415 || status === 400 || status === 500) { 
           addMessage({
             role: 'assistant',
-            content: error.response.data.detail,
+            content: error.response.data.detail ?? "Something went wrong with your request. Please try again.",
           });
         }else { 
           addMessage({

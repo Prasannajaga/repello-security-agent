@@ -3,6 +3,7 @@ from fastapi import APIRouter, UploadFile, Form, HTTPException , File
 from typing import Optional  
 from google import genai
 from app.template.promptTemplate import get_required_config
+# from app.template.rag import load_rag_template , retrieve_rag_template
 import logging  
 from dotenv import load_dotenv
 import os
@@ -21,7 +22,7 @@ logging.basicConfig(
  
 
 router = APIRouter()  
-client = genai.Client(api_key=str(os.getenv("GOOGLE_API_KEY")))   
+client = genai.Client(api_key=str(os.getenv("GENAI_GOOGLE_API_KEY")))   
 
 @router.get("/check")
 def read_root(): 
@@ -34,11 +35,8 @@ async def answer_query(file: UploadFile, query: str) -> str:
     Masks PII in the document text and refuses to reveal sensitive information explicitly.
     """     
     try:
-        contents, generate_content_config, model = await get_required_config(file=file, query=query)
-        # logger.info(f"Contents prepared for model: {contents}")
-        print(f"Contents prepared for model: {contents}")  # Print contents for debugging
-        # logger.info(f"Generate content config: {generate_content_config}")
-        # logger.info(f"Using model: {model}")
+        contents, generate_content_config, model = await get_required_config(file=file, query=query) 
+        print(f"Contents prepared for model: {contents}")  
     except Exception as e:  
         logger.error(f"Error in get_required_config: {str(e)}")
         raise HTTPException(
@@ -91,9 +89,10 @@ async def upload_document(file: Optional[UploadFile] = File(None), query: str = 
     Returns the answer in JSON format, with sensitive information masked.
     Limits file size to 10MB for practicality.
     """
-    # text = await load_pdf(file=file)
-    # # print(f"Loaded PDF text: {text}...")  # Print first 100 characters for debugging
-    # return {"answer": "PDF loaded successfully!"} 
+    # # text = await load_rag_template(file=file)
+    # response = await retrieve_rag_template(query=query)
+    # print(f"Loaded PDF text: {response}...")  # Print first 100 characters for debugging
+    # return {"answer": response} 
 
     is_nsfw = check_nsfw_content(query)
     if is_nsfw:
