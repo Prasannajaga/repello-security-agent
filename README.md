@@ -1,6 +1,6 @@
 # **Option 3: Document Analyzer with Privacy Guard**
 
- ⚠️**Disclaimer**: This repository may contain content or examples that are Not Safe For Work (NSFW) and are intended solely for testing and development purposes. Please review all code, documentation, and related resources thoroughly before using them in any professional, production, or public environments.
+ ⚠️**Disclaimer**: This repository may contain content or examples that are Not Safe For Work (NSFW) and are intended solely for testing and development purposes. Please review all code, documentation, and related resources thoroughly before using them in any professional or public environments.
 
 This project was developed as part of an assignment for **RepelloAI**, focusing on building a **privacy-first, secure AI agent** capable of intelligent document processing with strong safeguards against unsafe or malicious inputs. 
 
@@ -19,7 +19,6 @@ This project was developed as part of an assignment for **RepelloAI**, focusing 
   - [**Demo Video**](#demo-video)
   - [**Key Features**](#key-features)
   - [**Tech Stack**](#tech-stack)
-  - [**Challenges**](#challenges)
   - [**Prerequisites**](#prerequisites)
   - [**Installation**](#installation)
     - [**Clone the Repository**](#clone-the-repository)
@@ -32,7 +31,8 @@ This project was developed as part of an assignment for **RepelloAI**, focusing 
     - [**Backend**](#backend)
     - [**Frontend**](#frontend)
     - [**Project Structure**](#project-structure)
-  - [Troubleshooting](#troubleshooting)
+  - [**Troubleshooting**](#troubleshooting)
+  - [**Challenges Faced**](#challenges-faced)
 
 
 ---
@@ -52,16 +52,38 @@ This project was developed as part of an assignment for **RepelloAI**, focusing 
 > [image-text-pdf-summarize](https://drive.google.com/file/d/1Dp3YIV_5mIjx5C4832wPuuaPeMGytHyu/view?usp=drive_link) 
 > 
 > [prompt-injection-pdf](https://drive.google.com/file/d/1ihiZMir4CsK4RAKikvl1XFLhlKmNVyxL/view?usp=drive_link) 
+> 
+> [force-llm-to-break-instructions](https://drive.google.com/file/d/1AdPmdvaiTNeGWSRaVtQm7BEdZdcJcuad/view?usp=drive_link) 
+> 
+> [force-llm-to-break-instructions-2](https://drive.google.com/file/d/1P1qyHkl-znNjbdSVe6xf5vlnbVGRk5X8/view?usp=drive_link) 
 
 ---
 
 ## **Key Features**
-   - **NSFW Content Filtering:** Actively detects and blocks Not Safe For Work (NSFW) content in both textual and embedded media.
-   - **PDF Scanning with OCR:** Extracts text from PDFs, including scanned images, using OCR (Optical Character Recognition) technology.
-   - **Confidential Data Masking:** Automatically detects and masks sensitive information such as emails, addresses, phone numbers, and other private data with *** to prevent leakage.
-   - **Prompt Injection Protection:** Includes guardrails to detect and prevent prompt injection or malicious manipulation of input/output. 
-  
-  ⚠️ Built for environments where data privacy, security, and ethical AI practices are critical.
+
+- **Intelligent PDF Parsing (with Image Support):**  
+  Supports parsing of both text-based and image-based PDFs. Images inside PDFs are converted to byte streams and passed to the LLM, enabling it to analyze visual content without needing traditional OCR.
+
+- **Document Upload via Chat Interface:**  
+  Users can paste or upload documents directly through a chat interface, allowing interactive and natural document analysis.
+
+- **Confidential Data Masking (PII Redaction):**  
+  Sensitive information such as emails, phone numbers, and addresses is automatically masked using `***` before being passed to the LLM, ensuring privacy-first document handling.
+
+- **NSFW Content Filtering:**  
+  Enforced using `safeSettings` and additional filters to prevent the generation or processing of NSFW or harmful content. Built for high-compliance environments.
+
+- **Prompt Injection Protection:**  
+  Secure system instructions and sanitation layers are used to defend against prompt injection attacks and malicious input manipulation.
+
+- **Detailed Logging & Monitoring:**  
+  Real-time logs are viewable from the side navigation menu, giving insights into system behavior, operations, and errors.
+
+- **HTTP Error Handling:**  
+  Implements descriptive and user-friendly error messages for various HTTP status codes, improving the debugging and support experience.
+
+- **File Size Support (Up to 10MB):**  
+  Currently optimized for files up to **10MB**. Plans for future enhancement to support larger file sizes are under consideration.
 
 ## **Tech Stack**
 - **Frontend**:
@@ -79,14 +101,6 @@ This project was developed as part of an assignment for **RepelloAI**, focusing 
 - **AI Tools**:
   - **Google Genai SDK**: used googleGenai sdk for handling content and file efficiently with safe mesaures.
   - **ChatGpt, Grok, Copilot & gemini**: build with help of this models
-
-## **Challenges**
-- **CORS Configuration**: Ensuring proper CORS setup to allow frontend-backend communication, especially when running on different ports (e.g., `5173` for frontend, `8000` for backend).
-- **Dependency Conflicts**: Managing Python dependencies with `uv` and ensuring compatibility with `pyproject.toml` configurations.
-- **Port Conflicts**: Handling cases where default ports (`5173` or `8000`) are already in use, requiring manual port reassignment.
-- **Environment Variable Management**: Correctly configuring and accessing environment variables in both frontend (with `VITE_` prefix) and backend.
-- **TypeScript Integration**: Ensuring TypeScript types align with API responses from FastAPI for seamless frontend-backend integration.
-
 
 ## **Prerequisites**
 
@@ -257,7 +271,7 @@ VITE_PORT=5173
 
 ```
 
-## Troubleshooting
+## **Troubleshooting**
 
 - **Backend not starting**: Ensure the virtual environment is activated and all dependencies are installed. Check for errors in the terminal output.
 - **Frontend not connecting to backend**: Verify the API URL in your frontend code matches the backend’s address (`http://localhost:8000`). Check for CORS issues; ensure your FastAPI app allows requests from the frontend origin (e.g., `http://localhost:5173`).
@@ -274,3 +288,23 @@ VITE_PORT=5173
     ```
 - **Port conflicts**: If ports `8000` or `5173` are in use, change the ports in the backend (`uvicorn main:app --port 8001`) or frontend (`vite.config.js` or CLI option).
  
+
+## **Challenges Faced**
+
+- **Initial Detour with Option 1 – AI Research Assistant (High Weightage):**  
+  Spent around **4 hours** trying to implement a research assistant using tools like **Google Cloud Search**, **SERP API**, and **Whoogle Search**. Unfortunately, most solutions were either paid or had restrictive limitations. While this path didn’t lead to a working outcome, it gave me valuable insights into how AI agents crawl, fetch, and synthesize information from the web.
+
+- **Pivot to Option 3 – Document Analyzer with Privacy Guard:**  
+  Switched gears to Option 3, and got the initial setup running within an hour. This track felt more manageable and aligned with the evaluation goals.
+
+- **Learning & Implementing OCR from Scratch:**  
+  OCR was a completely new domain. I spent time understanding different approaches, consulting documentation, and brainstorming ideas using **Grok** and **ChatGPT**. Eventually, a GitHub contributor pointed me to a practical solution that worked smoothly and fit the use case well.
+
+- **Tried Multiple OCR Approaches:**  
+  Experimented with tools like **pytesseract**, `PDFMinerLoader`, and `UnstructuredLoader` from **LangChain**. These required deep tweaking and are still under evaluation for better accuracy and performance.
+
+- **Retrieval-Augmented Generation (RAG) Exploration:**  
+  Started building a RAG pipeline using `GoogleGenAiEmbeddings` and `GooglePalmEmbeddings` with **ChromaDB** as the vector store. This is a work-in-progress as I continue fine-tuning embedding performance and retrieval relevance.
+
+- **Thanks, Gemini!**  
+  Huge shoutout to **Google Gemini 1.5 Flash** and **2.0 Flash** for being the horsepower behind much of the agent's reasoning. At one point, both decided to take an unexpected 20-minute break right in the middle of testing. AI burnout? Maybe. Still, major props to Google for offering these powerful models for free.
