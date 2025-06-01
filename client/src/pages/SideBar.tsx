@@ -1,7 +1,10 @@
+import { useState } from "react";
 import SidebarItem, { type SidebarItemProps } from "./SiteBarItem";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
-  const items: SidebarItemProps[] = [
+  const data: SidebarItemProps[] = [
     {
       label: 'New Chat',
       isHighlighted: true,
@@ -16,6 +19,7 @@ const Sidebar: React.FC = () => {
     },
     {
       label: 'Logs',
+      isHighlighted: false,
       path : "/logs", 
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -27,6 +31,7 @@ const Sidebar: React.FC = () => {
     }, 
     {
       label: 'Dark Mode',
+      isHighlighted: false,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
           <path
@@ -36,6 +41,23 @@ const Sidebar: React.FC = () => {
       ),
     },
   ];
+
+  const [items , setItems] = useState<SidebarItemProps[]>(data);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setItems((prevItems) => {
+      return prevItems.map((item) => {
+        if (item.path === location.pathname) {
+          return { ...item, isHighlighted: true };
+        } else {
+          return { ...item, isHighlighted: false };
+        }
+      });
+    });
+  }, [location.pathname]);
+ 
 
   return (
     <div className="flex h-full min-h-[700px] flex-col justify-between bg-slate-50 dark:bg-[#101a23] p-4">
@@ -47,7 +69,7 @@ const Sidebar: React.FC = () => {
               key={index}
               icon={item.icon}
               label={item.label}
-              isHighlighted={item.isHighlighted}
+              isHighlighted={item.isHighlighted} 
             />
           ))}
         </div>

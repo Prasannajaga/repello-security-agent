@@ -7,6 +7,7 @@ export interface SidebarItemProps {
   path?: string;
   isHighlighted?: boolean;
   theme?: boolean;
+  onSelect?: (path: string) => void;
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ icon, label, isHighlighted = false , theme  , path}) => {

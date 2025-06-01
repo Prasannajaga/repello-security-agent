@@ -208,23 +208,16 @@ const MainContent: React.FC = () => {
 
         {/* Input area with consistent padding and alignment */}
         <div className="flex items-center dark:bg-gray-800 bg-[#e7edf4] rounded-full px-4 py-2 gap-3">
-          <div
+          <input
             ref={inputRef}
-            contentEditable
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
             onPaste={handlePaste}
-            // onInput={handleInput} 
-            suppressContentEditableWarning
-            className="flex-1 outline-none text-gray-800 dark:text-gray-300"
-          >
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              type="text"
-              placeholder="Ask anything"
-              className="bg-transparent w-full outline-none text-gray-800 dark:text-gray-300 placeholder-gray-500"
-            />
-          </div>
+            type="text"
+            placeholder="Ask anything"
+            className="flex-1 outline-none text-gray-800 dark:text-gray-300 bg-transparent w-full placeholder-gray-500"
+          />
 
           {/* Action buttons in a compact row */}
           <div className="flex items-center gap-3">

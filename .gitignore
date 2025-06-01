@@ -1,1 +1,9 @@
-server\app\__pycache__\main.cpython-310.pyc
+server/.env
+/server
+*.pyc
+*.pyc
+/server/app/__pycache__
+/server
+*.pyc
+/server/app/routes/__pycache__
+*.json
