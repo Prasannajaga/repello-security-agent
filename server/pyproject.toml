@@ -6,14 +6,15 @@ readme = "README.md"
 requires-python = ">=3.10" 
 dependencies = [
     "fastapi",
+    "google-genai>=1.18.0",
     "google-generativeai>=0.8.5",
     "langchain>=0.3.25",
     "langchain-community>=0.3.24",
     "langchain-google-genai>=2.0.10",
-    "pdfplumber>=0.11.6",
-    "python-multipart>=0.0.20",
+    "pdf2image>=1.17.0", 
+    "pypdf>=5.5.0",
+    "pypdf2>=3.0.1", 
+    "python-multipart>=0.0.20", 
     "uvicorn[standard]",
 ]
-
-# [tool.uv]
-# virtualenvs.in-project = true
+ 

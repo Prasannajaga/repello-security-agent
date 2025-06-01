@@ -1,114 +1,89 @@
 # Import necessary libraries
 from fastapi import APIRouter, UploadFile, Form, HTTPException , File
-from typing import Optional
-import pdfplumber
-import re 
-from langchain_google_genai import GoogleGenerativeAI
-from langchain.prompts import PromptTemplate 
+from typing import Optional  
+from google import genai
+from app.template.promptTemplate import get_required_config
+import logging  
+from dotenv import load_dotenv
+import os
 
-# Initialize FastAPI app
-router = APIRouter()
-llm = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyCsbQwJwKCjs0WneRejEQ_N6Q5_aHrcivc")
-# llm = GoogleGenerativeAI(model="gemini-pro-vision", google_api_key="AIzaSyCsbQwJwKCjs0WneRejEQ_N6Q5_aHrcivc")
+load_dotenv()
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("app/server.log"),
+        logging.StreamHandler()  
+    ]
+) 
+ 
 
+router = APIRouter()  
+client = genai.Client(api_key=str(os.getenv("GOOGLE_API_KEY")))   
 
 @router.get("/check")
-def read_root():
-    """
-    Root endpoint to check if the API is running.
-    """
-  
-    data = llm.invoke("Hello from FastAPI with uv!")
-    return {"message": data}
-
-# Function to parse document content based on file type
-def parse_document(file: UploadFile) -> str:
-    """
-    Parses the content of the uploaded file.
-    Supports PDF, plain text, and CSV files.
-    For image-based PDFs or images, OCR is not implemented (placeholder).
-    """
-    if file.content_type == 'application/pdf':
-        # Extract text from PDF using pdfplumber
-        # Note: Image-based PDFs require OCR (e.g., pytesseract), not implemented here
-        with pdfplumber.open(file.file) as pdf:
-            text = ''
-            for page in pdf.pages:
-                extracted = page.extract_text()
-                if extracted:  # Ensure text is not None
-                    text += extracted + '\n'
-            if not text.strip():
-                raise ValueError("No text could be extracted from the PDF.")
-        return text
-    elif file.content_type == 'text/plain':
-        # Read plain text file
-        return file.file.read().decode('utf-8')
-    elif file.content_type == 'text/csv':
-        # Read CSV file as text (for simplicity; could be parsed structurally if needed)
-        return file.file.read().decode('utf-8')
-    else:
-        raise ValueError("Unsupported file type. Only PDF, text, and CSV are supported.")
-
-# Function to detect and mask Personally Identifiable Information (PII)
-def detect_and_mask_pii(text: str) -> str:
-    """
-    Detects and masks sensitive information (PII) in the text using regex patterns.
-    Masks emails, phone numbers, social security numbers, and account numbers.
-    Personal names detection is skipped due to complexity (NER could be used).
-    """
-    # Define regex patterns for PII
-    email_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-    phone_pattern = r'\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b'
-    ssn_pattern = r'\b\d{3}-\d{2}-\d{4}\b'
-    account_pattern = r'\b\d{10,16}\b'
-
-    # Mask PII in the text
-    text = re.sub(email_pattern, '[EMAIL]', text)
-    text = re.sub(phone_pattern, '[PHONE]', text)
-    text = re.sub(ssn_pattern, '[SSN]', text)
-    text = re.sub(account_pattern, '[ACCOUNT]', text)
-
-    return text
-
-# Set up the Language Model (LLM) using Google Generative AI (Gemini API)
-# Replace 'YOUR_API_KEY' with your actual Google API key
-# In production, use environment variables (e.g., os.environ["GOOGLE_API_KEY"])
-
-# Define a prompt template for the LLM
-prompt_template = PromptTemplate(
-    input_variables=["document", "query"],
-    template="Document content (sensitive information masked):\n{document}\n\nUser query: {query}\n\nAnswer:"
-)
-
-# Create an LLM chain
-chain = prompt_template | llm
-
+def read_root(): 
+    return {"message": "Hello from FastAPI with uv!"}
+ 
 # Function to answer user queries with privacy guard
-def answer_query(document_text: str, user_query: str) -> str:
+async def answer_query(file: UploadFile, query: str) -> str:
     """
     Answers user queries about the document while respecting privacy.
     Masks PII in the document text and refuses to reveal sensitive information explicitly.
+    """     
+    try:
+        contents, generate_content_config, model = await get_required_config(file=file, query=query)
+        # logger.info(f"Contents prepared for model: {contents}")
+        print(f"Contents prepared for model: {contents}")  # Print contents for debugging
+        # logger.info(f"Generate content config: {generate_content_config}")
+        # logger.info(f"Using model: {model}")
+    except Exception as e:  
+        logger.error(f"Error in get_required_config: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail="Something went wrong while processing your request. Please try again later."
+        )
+ 
+
+    response = client.models.generate_content(
+        model = model,
+        contents = contents,
+        config = generate_content_config,
+    )
+
+    try:
+        return response.text.strip()
+    except Exception as e:
+        logger.error(f"Error generating content: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail="Something went wrong while processing your request. Please try again later."
+        )
+
+
+
+def check_nsfw_content(user_query: str) -> bool:
     """
-    # Validate query length to prevent abuse (arbitrary limit of 500 characters)
-    if len(user_query) > 500:
-        raise ValueError("Query too long. Maximum length is 500 characters.")
+    Checks if the user_query contains any NSFW content.
+    Returns True if NSFW content is found, otherwise False.
+    """
+    # Placeholder for actual NSFW detection logic
 
-    # Mask PII in the document text
-    masked_text = detect_and_mask_pii(document_text)
+    try:
+        with open(r"D:\hackathon\repello-security-agent\server\app\template\nsfw_content.txt", 'r') as file:
+            nsfw_keywords = [line.strip().lower() for line in file if line.strip()]
+    except FileNotFoundError:
+        return False  # If file not found, assume no NSFW content
 
-    # Check if the query attempts to reveal sensitive information
-    forbidden_phrases = ["show full", "unmask", "reveal", "original email", "actual number"]
-    if any(phrase in user_query.lower() for phrase in forbidden_phrases):
-        return "Cannot reveal sensitive information."
-
-    # Generate answer using the LLM chain with masked document text
-    answer = chain.run(document=masked_text, query=user_query)
-    # Ensure the answer doesn't inadvertently leak PII by re-masking
-    answer = detect_and_mask_pii(answer)
-    return answer
-
-# FastAPI POST endpoint to upload document and query
+    user_query_words = user_query.lower().split()
+    for keyword in nsfw_keywords:
+        if keyword in user_query_words:
+            return True
+        
+    return False
+ 
 @router.post("/upload")
 async def upload_document(file: Optional[UploadFile] = File(None), query: str = Form(...)):
     """
@@ -116,28 +91,47 @@ async def upload_document(file: Optional[UploadFile] = File(None), query: str = 
     Returns the answer in JSON format, with sensitive information masked.
     Limits file size to 10MB for practicality.
     """
-    # Check file size (limit to 10MB)
-    if not file is None:
-        print(f"Received file: {file.filename}, type: {file.content_type}") 
+    # text = await load_pdf(file=file)
+    # # print(f"Loaded PDF text: {text}...")  # Print first 100 characters for debugging
+    # return {"answer": "PDF loaded successfully!"} 
+
+    is_nsfw = check_nsfw_content(query)
+    if is_nsfw:
+        logger.warning(f"NSFW content detected in query: {query}")
+        raise HTTPException(
+            status_code=400,
+            detail="Oops! 🚫 Your query seems to contain NSFW content. Please rephrase your question to keep it safe and respectful! 🙏✨"
+        )
+
+    if file != None: 
+        logger.info(f"Received file: {file.filename}, type: {file.content_type}")
+        if file.content_type not in ["text/plain", "application/pdf"]:
+            logger.error(f"Unsupported file type: {file.content_type}")
+            raise HTTPException(
+                status_code=415,
+                detail="Oops! 🚫 This file type is not supported. Please upload a PDF, plain text so we can work some magic! ✨"
+            )
+
+        # Check file size (limit to 10MB)
         file_size = 0
         for chunk in file.file:
             file_size += len(chunk)
             if file_size > 10 * 1024 * 1024:  
-                raise HTTPException(status_code=413, detail="File too large. Maximum size is 10MB.")
+                logger.error(f"File too large: {file.filename} ({file_size} bytes)")
+                raise HTTPException(
+                    status_code=413,
+                    detail="Whoa! 🚀 This file is too big for our magic tricks. Please upload something under 10MB so we can work our wizardry! 🧙‍♂️✨"
+                )
         file.file.seek(0)   
 
-    try:
-        # Parse the document content
-        # document_text = parse_document(file)
-        # # Get the answer to the user query
-        # answer = answer_query(document_text, query)
-        return {"answer": "answer"}
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="An unexpected error occurred")
+    try:  
+        if file != None: 
+            answer = await answer_query(file, query)
+        else:
+            answer = await answer_query(None, query)
 
-# To run the application:
-# 1. Install dependencies: pip install fastapi uvicorn pdfplumber langchain google-generativeai
-# 2. Replace "YOUR_API_KEY" with your actual Gemini API key
-# 3. Run with: uvicorn main:app --reload
+        return {"answer": answer}
+    except ValueError as e:
+        logger.error(f"ValueError: {str(e)}")
+        raise HTTPException(status_code=400, detail=str(e)) 
+
