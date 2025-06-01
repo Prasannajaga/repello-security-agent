@@ -1,0 +1,67 @@
+Invoice ID  Customer Name           Email                        Phone Number           Address                                      Product                  Unit Price  Quantity  Total Price
+INV0001     Norma Ingram           raymonddebra@gmail.com       001-899-387-6235x97159 4841 Jenkins Stravenue, Smithshire, MD 58144 Wireless Mouse           19.99       1         19.99
+INV0001     Norma Ingram           raymonddebra@gmail.com       001-899-387-6235x97159 4841 Jenkins Stravenue, Smithshire, MD 58144 HDMI Cable               8.99        1         8.99
+INV0001     Norma Ingram           raymonddebra@gmail.com       001-899-387-6235x97159 4841 Jenkins Stravenue, Smithshire, MD 58144 Laptop Stand             32          2         64
+INV0001     Norma Ingram           raymonddebra@gmail.com       001-899-387-6235x97159 4841 Jenkins Stravenue, Smithshire, MD 58144 Wireless Mouse           19.99       3         59.97
+INV0001     Norma Ingram           raymonddebra@gmail.com       001-899-387-6235x97159 4841 Jenkins Stravenue, Smithshire, MD 58144 Phone Case              12.99       1         12.99
+INV0002     Matthew Roman          daniel85@gmail.com           1099563732             5846 Leah Gardens Suite 744, Deannachester, MN 24713 HDMI Cable       8.99        1         8.99
+INV0002     Matthew Roman          daniel85@gmail.com           1099563732             5846 Leah Gardens Suite 744, Deannachester, MN 24713 Phone Case       12.99       3         38.97
+INV0002     Matthew Roman          daniel85@gmail.com           1099563732             5846 Leah Gardens Suite 744, Deannachester, MN 24713 Webcam           39.99       2         79.98
+INV0003     Anna Anderson          michaelajones@gmail.com      001-290-788-2775x9771 3630 Lopez Vista, Shawnmouth, NE 90774 Bluetooth Headphones     49.99       1         49.99
+INV0003     Anna Anderson          michaelajones@gmail.com      001-290-788-2775x9771 3630 Lopez Vista, Shawnmouth, NE 90774 USB-C Charger            25.5        2         51
+INV0003     Anna Anderson          michaelajones@gmail.com      001-290-788-2775x9771 3630 Lopez Vista, Shawnmouth, NE 90774 External Hard Drive      75          2         150
+INV0003     Anna Anderson          michaelajones@gmail.com      001-290-788-2775x9771 3630 Lopez Vista, Shawnmouth, NE 90774 Wireless Mouse           19.99       1         19.99
+INV0003     Anna Anderson          michaelajones@gmail.com      001-290-788-2775x9771 3630 Lopez Vista, Shawnmouth, NE 90774 Bluetooth Headphones     49.99       2         99.98
+INV0004     Whitney Clark          joel06@gmail.com             692.536.5599x211       72420 Autumn Port, West Cynthia, DC 63309 Keyboard                45          1         45
+INV0004     Whitney Clark          joel06@gmail.com             692.536.5599x211       72420 Autumn Port, West Cynthia, DC 63309 Webcam                  39.99       1         39.99
+INV0004     Whitney Clark          joel06@gmail.com             692.536.5599x211       72420 Autumn Port, West Cynthia, DC 63309 Keyboard                45          2         90
+INV0004     Whitney Clark          joel06@gmail.com             692.536.5599x211       72420 Autumn Port, West Cynthia, DC 63309 Phone Case              12.99       3         38.97
+INV0005     Corey Miller           batesapril@gmail.com         7598330916             511 James Prairie, New Lynn, ID 42841 HDMI Cable                  8.99        1         8.99
+INV0005     Corey Miller           batesapril@gmail.com         7598330916             511 James Prairie, New Lynn, ID 42841 Wireless Mouse              19.99       2         39.98
+INV0005     Corey Miller           batesapril@gmail.com         7598330916             511 James Prairie, New Lynn, ID 42841 Bluetooth Headphones        49.99       2         99.98
+INV0005     Corey Miller           batesapril@gmail.com         7598330916             511 James Prairie, New Lynn, ID 42841 Wireless Mouse              19.99       1         19.99
+INV0006     Ms. Mindy Johnson      ywilson@gmail.com            (484)787-4327x1356     73664 Harrison Cape Suite 813, Natashamouth, HI 10282 Webcam         39.99       3         119.97
+INV0006     Ms. Mindy Johnson      ywilson@gmail.com            (484)787-4327x1356     73664 Harrison Cape Suite 813, Natashamouth, HI 10282 Keyboard       45          1         45
+INV0007     Charles Coleman        christine76@gmail.com        001-321-201-8409x615   47205 Laura Rapids Apt. 199, Melindaberg, HI 13147 Keyboard          45          1         45
+INV0007     Charles Coleman        christine76@gmail.com        001-321-201-8409x615   47205 Laura Rapids Apt. 199, Melindaberg, HI 13147 Bluetooth Headphones 49.99    3         149.97
+INV0007     Charles Coleman        christine76@gmail.com        001-321-201-8409x615   47205 Laura Rapids Apt. 199, Melindaberg, HI 13147 Bluetooth Headphones 49.99    3         149.97
+INV0007     Charles Coleman        christine76@gmail.com        001-321-201-8409x615   47205 Laura Rapids Apt. 199, Melindaberg, HI 13147 USB-C Charger       25.5        3         76.5
+INV0007     Charles Coleman        christine76@gmail.com        001-321-201-8409x615   47205 Laura Rapids Apt. 199, Melindaberg, HI 13147 USB-C Charger       25.5        2         51
+INV0008     Blake Haynes           hrichards@gmail.com          149.375.2846           57424 Levy Burg Apt. 421, North Carolynfurt, DC 84794 External Hard Drive 75        3         225
+INV0008     Blake Haynes           hrichards@gmail.com          149.375.2846           57424 Levy Burg Apt. 421, North Carolynfurt, DC 84794 Phone Case        12.99       3         38.97
+INV0008     Blake Haynes           hrichards@gmail.com          149.375.2846           57424 Levy Burg Apt. 421, North Carolynfurt, DC 84794 HDMI Cable        8.99        2         17.98
+INV0009     Shelly Peterson DVM    mjohnson@gmail.com           380.958.8918           213 Sylvia Ports Suite 032, Lake Billyfort, LA 76090 USB-C Charger      25.5        1         25.5
+INV0009     Shelly Peterson DVM    mjohnson@gmail.com           380.958.8918           213 Sylvia Ports Suite 032, Lake Billyfort, LA 76090 Phone Case        12.99       2         25.98
+INV0010     Andrea Cox             kduran@gmail.com             954.372.5396x363       0187 John Brook Suite 941, Lake Chadton, HI 17513 HDMI Cable            8.99        2         17.98
+INV0010     Andrea Cox             kduran@gmail.com             954.372.5396x363       0187 John Brook Suite 941, Lake Chadton, HI 17513 Phone Case            12.99       3         38.97
+INV0010     Andrea Cox             kduran@gmail.com             954.372.5396x363       0187 John Brook Suite 941, Lake Chadton, HI 17513 Phone Case            12.99       3         38.97
+INV0011     Chad Benson            josephtaylor@gmail.com       001-203-341-9001x72337 PSC 7429, Box 3542, APO AE 99370 Phone Case                12.99       3         38.97
+INV0011     Chad Benson            josephtaylor@gmail.com       001-203-341-9001x72337 PSC 7429, Box 3542, APO AE 99370 Bluetooth Headphones      49.99       3         149.97
+INV0011     Chad Benson            josephtaylor@gmail.com       001-203-341-9001x72337 PSC 7429, Box 3542, APO AE 99370 External Hard Drive       75          1         75
+INV0011     Chad Benson            josephtaylor@gmail.com       001-203-341-9001x72337 PSC 7429, Box 3542, APO AE 99370 Wireless Mouse            19.99       2         39.98
+INV0011     Chad Benson            josephtaylor@gmail.com       001-203-341-9001x72337 PSC 7429, Box 3542, APO AE 99370 External Hard Drive       75          3         225
+INV0012     Crystal Pierce         tracychavez@gmail.com        004-317-6509           PSC 0056, Box 3385, APO AA 66652 Bluetooth Headphones      49.99       3         149.97
+INV0012     Crystal Pierce         tracychavez@gmail.com        004-317-6509           PSC 0056, Box 3385, APO AA 66652 Laptop Stand              32          2         64
+INV0012     Crystal Pierce         tracychavez@gmail.com        004-317-6509           PSC 0056, Box 3385, APO AA 66652 Wireless Mouse            19.99       2         39.98
+INV0012     Crystal Pierce         tracychavez@gmail.com        004-317-6509           PSC 0056, Box 3385, APO AA 66652 Smartwatch                129.99      1         129.99
+INV0013     Shawn Harris           khernandez@gmail.com         +1-113-572-3801x87106 Unit 5864 Box 4433, DPO AA 60484 Wireless Mouse            19.99       1         19.99
+INV0014     Eddie Brown            luke71@gmail.com             115-052-2232           3130 Warner Meadow, West Cory, ME 96537 External Hard Drive     75          1         75
+INV0014     Eddie Brown            luke71@gmail.com             115-052-2232           3130 Warner Meadow, West Cory, ME 96537 Keyboard                45          2         90
+INV0014     Eddie Brown            luke71@gmail.com             115-052-2232           3130 Warner Meadow, West Cory, ME 96537 Webcam                  39.99       2         79.98
+INV0014     Eddie Brown            luke71@gmail.com             115-052-2232           3130 Warner Meadow, West Cory, ME 96537 Laptop Stand            32          3         96
+INV0015     Claudia Bell           ycamacho@gmail.com           001-856-498-6980x1733 083 Michelle Flat Suite 853, Christensenport, NH 32644 Phone Case      12.99       2         25.98
+INV0016     Lindsey Barrett        kevinspencer@gmail.com       001-060-462-6664x0615 79783 Travis Well Suite 235, West Marciatown, IN 92018 Laptop Stand    32          1         32
+INV0017     William Aguirre        cynthiaramsey@gmail.com      (583)893-2303x91958    6742 Robert Glens, Port John, WV 60348 Smartwatch              129.99      2         259.98
+INV0018     Justin Soto            ivalentine@gmail.com         168.489.0061x8329      Unit 2656 Box 8172, DPO AE 75639 USB-C Charger             25.5        1         25.5
+INV0018     Justin Soto            ivalentine@gmail.com         168.489.0061x8329      Unit 2656 Box 8172, DPO AE 75639 Smartwatch                129.99      3         389.97
+INV0018     Justin Soto            ivalentine@gmail.com         168.489.0061x8329      Unit 2656 Box 8172, DPO AE 75639 Smartwatch                129.99      2         259.98
+INV0018     Justin Soto            ivalentine@gmail.com         168.489.0061x8329      Unit 2656 Box 8172, DPO AE 75639 Wireless Mouse            19.99       3         59.97
+INV0019     William Matthews       kristen08@gmail.com          +1-180-092-6490x3100  5494 Fletcher Glen Apt. 026, Jessicamouth, WA 82720 Smartwatch         129.99      3         389.97
+INV0019     William Matthews       kristen08@gmail.com          +1-180-092-6490x3100  5494 Fletcher Glen Apt. 026, Jessicamouth, WA 82720 Bluetooth Headphones 49.99     3         149.97
+INV0019     William Matthews       kristen08@gmail.com          +1-180-092-6490x3100  5494 Fletcher Glen Apt. 026, Jessicamouth, WA 82720 Keyboard           45          2         90
+INV0020     Carlos Chaney          ljackson@gmail.com           153-315-7727x85316     Unit 4929 Box 5823, DPO AP 95298 Smartwatch                129.99      3         389.97
+INV0020     Carlos Chaney          ljackson@gmail.com           153-315-7727x85316     Unit 4929 Box 5823, DPO AP 95298 Bluetooth Headphones      49.99       2         99.98
+INV0020     Carlos Chaney          ljackson@gmail.com           153-315-7727x85316     Unit 4929 Box 5823, DPO AP 95298 Phone Case                12.99       3         38.97
+INV0020     Carlos Chaney          ljackson@gmail.com           153-315-7727x85316     Unit 4929 Box 5823, DPO AP 95298 Webcam                    39.99       1         39.99
+
+ 
