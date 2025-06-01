@@ -148,12 +148,7 @@ def get_pdf_reader(upload_file: UploadFile):
     file_bytes = upload_file.file.read()
     file_stream = io.BytesIO(file_bytes)
 
-    reader = PdfReader(file_stream)
-    # print(f"PDF Metadata: {reader}")  # Print metadata for debugging
-
-    # Extract text from all pages
-    # text =  extract_text_from_pdf(reader=reader)
-    # print(f"Extracted text: {text}")  # Print first 100 characters for debugging
+    reader = PdfReader(file_stream) 
 
     return reader
 

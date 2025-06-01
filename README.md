@@ -33,6 +33,7 @@ This project was developed as part of an assignment for **RepelloAI**, focusing 
     - [**Project Structure**](#project-structure)
   - [**Troubleshooting**](#troubleshooting)
   - [**Challenges Faced**](#challenges-faced)
+  - [**Final Thoughts**](#final-thoughts)
 
 
 ---
@@ -308,3 +309,13 @@ VITE_PORT=5173
 
 - **Thanks, Gemini!**  
   Huge shoutout to **Google Gemini 1.5 Flash** and **2.0 Flash** for being the horsepower behind much of the agent's reasoning. At one point, both decided to take an unexpected 20-minute break right in the middle of testing. AI burnout? Maybe. Still, major props to Google for offering these powerful models for free.
+
+
+## **Final Thoughts**
+
+Thanks to RepelloAI for giving me this opportunity — it truly pushed me beyond the comfort zone. This project tested my ability to think fast, build faster, and stay focused under pressure. From wrangling APIs to building a privacy-first document agent with masking and image-based PDF handling — every part of this build was a learning milestone.
+
+I'm genuinely proud of where my skills stand today.
+
+**P.S.** If you're checking this before EOD (not just at 6 PM 😉), there's a good chance that **RAG (Retrieval-Augmented Generation)** has already been implemented in the agent to better handle document flow and context retrieval. Stay tuned! it's only getting smarter! 
+
