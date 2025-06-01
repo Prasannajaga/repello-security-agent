@@ -1,15 +1,25 @@
-# Security Agent
+# **Option 3: Document Analyzer with Privacy Guard**
 
  ⚠️**Disclaimer**: This repository may contain content or examples that are Not Safe For Work (NSFW) and are intended solely for testing and development purposes. Please review all code, documentation, and related resources thoroughly before using them in any professional, production, or public environments.
 
-Repello Security Agent is an open-source tool designed to provide real-time security monitoring and threat mitigation for AI applications. It continuously scans AI inputs/outputs to detect vulnerabilities (e.g., prompt injections or jailbreak attempts) and enforce security policies. By providing continuous monitoring and mitigation, it helps keep GenAI applications secure in real time.
+This project was developed as part of an assignment for **RepelloAI**, focusing on building a **privacy-first, secure AI agent** capable of intelligent document processing with strong safeguards against unsafe or malicious inputs. 
 
-## Table of Contents
-- [Security Agent](#security-agent)
-  - [Table of Contents](#table-of-contents)
-  - [Key Features](#key-features)
-  - [Tech Stack](#tech-stack)
-  - [Challenges](#challenges)
+## **Objective**
+- **Scans documents** (including PDFs with embedded or scanned images)
+- **Extracts text accurately**
+- **Masks sensitive information** (such as emails, phone numbers, and addresses)
+- **Prevents NSFW content** from being processed or returned
+- **Protects against prompt injection attacks** or manipulative input patterns
+ 
+
+## **Table of Contents**
+- [**Option 3: Document Analyzer with Privacy Guard**](#option-3-document-analyzer-with-privacy-guard)
+  - [**Objective**](#objective)
+  - [**Table of Contents**](#table-of-contents)
+  - [**Demo Video**](#demo-video)
+  - [**Key Features**](#key-features)
+  - [**Tech Stack**](#tech-stack)
+  - [**Challenges**](#challenges)
   - [**Prerequisites**](#prerequisites)
   - [**Installation**](#installation)
     - [**Clone the Repository**](#clone-the-repository)
@@ -24,31 +34,53 @@ Repello Security Agent is an open-source tool designed to provide real-time secu
     - [**Project Structure**](#project-structure)
   - [Troubleshooting](#troubleshooting)
 
-## Key Features
-- **Interactive Chat Interface**: A responsive React-based frontend for real-time user interaction via a chat interface at `http://localhost:5173/chat`.
-- **High-Performance Backend**: FastAPI provides a lightweight, asynchronous API with automatic Swagger UI and ReDoc documentation for easy endpoint testing.
-- **Isolated Dependency Management**: Uses `uv` for efficient Python dependency management and virtual environments to ensure clean, reproducible setups.
-- **CORS Support**: Configurable Cross-Origin Resource Sharing (CORS) for secure communication between the frontend and backend.
-- **Modular Project Structure**: Organized directory structure with separate `client` and `server` folders for clear separation of concerns.
-- **Hot Reloading**: Vite’s fast development server and FastAPI’s `--reload` option enable real-time updates during development.
 
-## Tech Stack
+---
+
+## **Demo Video**
+
+🎬 **Watch the test case demo**:  
+
+> [nsfw-content](https://drive.google.com/file/d/1BEpE2udFQSvfuF2murS5qZveN4bf-Tkf/view?usp=drive_link)
+> 
+> [nudity-content](https://drive.google.com/file/d/1cGoXCxNNeoQvnmnDzFa0nQpC19mVr0r7/view?usp=drive_link)
+>
+> [blood-content](https://drive.google.com/file/d/1v5f0HJOejt_TFRPPCFYEjKKVZi9qUXgp/view?usp=drive_link)
+>
+> [text-summarize](https://drive.google.com/file/d/1a_2ioB_Pz86BFsrFMojUJ5dwJ8tFMVxI/view?usp=drive_link) 
+> 
+> [image-text-pdf-summarize](https://drive.google.com/file/d/1Dp3YIV_5mIjx5C4832wPuuaPeMGytHyu/view?usp=drive_link) 
+> 
+> [prompt-injection-pdf](https://drive.google.com/file/d/1ihiZMir4CsK4RAKikvl1XFLhlKmNVyxL/view?usp=drive_link) 
+
+---
+
+## **Key Features**
+   - **NSFW Content Filtering:** Actively detects and blocks Not Safe For Work (NSFW) content in both textual and embedded media.
+   - **PDF Scanning with OCR:** Extracts text from PDFs, including scanned images, using OCR (Optical Character Recognition) technology.
+   - **Confidential Data Masking:** Automatically detects and masks sensitive information such as emails, addresses, phone numbers, and other private data with *** to prevent leakage.
+   - **Prompt Injection Protection:** Includes guardrails to detect and prevent prompt injection or malicious manipulation of input/output. 
+  
+  ⚠️ Built for environments where data privacy, security, and ethical AI practices are critical.
+
+## **Tech Stack**
 - **Frontend**:
   - **React**: JavaScript library for building user interfaces.
   - **Vite**: Next-generation frontend tooling for fast development and optimized builds.
   - **TypeScript**: Adds static types to JavaScript for improved code reliability.
   - **Tailwind CSS** (optional, if used): Utility-first CSS framework for styling.
+  - **MarkdDown** to render the markdown text returned by gemini.
 - **Backend**:
   - **FastAPI**: High-performance Python framework for building APIs with async support.
   - **Uvicorn**: ASGI server for running FastAPI applications.
   - **Python**: Version 3.10+ for backend logic and API development.
   - **uv**: Fast Python package and dependency manager.
-- **Tools**:
-  - **Git**: Version control for managing the codebase.
-  - **npm/yarn**: Package managers for frontend dependencies.
-  - **VS Code**: Recommended code editor for development.
+  - **PyPDF2**: for parsing pdf efficiently
+- **AI Tools**:
+  - **Google Genai SDK**: used googleGenai sdk for handling content and file efficiently with safe mesaures.
+  - **ChatGpt, Grok, Copilot & gemini**: build with help of this models
 
-## Challenges
+## **Challenges**
 - **CORS Configuration**: Ensuring proper CORS setup to allow frontend-backend communication, especially when running on different ports (e.g., `5173` for frontend, `8000` for backend).
 - **Dependency Conflicts**: Managing Python dependencies with `uv` and ensuring compatibility with `pyproject.toml` configurations.
 - **Port Conflicts**: Handling cases where default ports (`5173` or `8000`) are already in use, requiring manual port reassignment.
