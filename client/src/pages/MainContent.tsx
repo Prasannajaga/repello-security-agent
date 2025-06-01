@@ -135,20 +135,20 @@ const MainContent: React.FC = () => {
       console.log(error);
       const status = error.response ? error.response.status : 500;
 
-      if(error.response){
+      // if(error.response){
 
         if (status === 413 || status === 415 || status === 400 || status === 500) { 
           addMessage({
             role: 'assistant',
-            content: error.response.data.detail ?? "Something went wrong with your request. Please try again.",
+            content: error?.response?.data?.detail ?? "Something went wrong with your request. Please try again.",
           });
         }else { 
           addMessage({
             role: 'assistant',
-            content: `Yikes! Something went sideways: ${error.message || "Gremlins in the system?"}`,
+            content: `Yikes! Something went sideways: ${error?.message || "Gremlins in the system?"}`,
           });
         }
-      }
+      // }
       
       setTyping(false); 
       return null;

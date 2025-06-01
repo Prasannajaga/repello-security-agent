@@ -395,3 +395,41 @@
 2025-06-01 16:33:47,604 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-01 16:35:31,228 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-01 16:37:30,103 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:39:43,594 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:40:17,300 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:41:39,229 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:42:31,408 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:43:43,863 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 18:44:20,233 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:51:28,668 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:51:28,679 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 23:51:28,701 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 23:51:36,042 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 23:51:36,062 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 23:51:57,126 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:53:57,117 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:53:57,117 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 23:53:57,131 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-01 23:54:02,233 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-01 23:54:02,237 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-01 23:54:38,913 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:54:39,370 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:55:42,399 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:55:42,764 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:55:42,827 - app.routes.document - ERROR - ValueError: Expected Embeddings to be non-empty list or numpy array, got [] in upsert.
+2025-06-01 23:56:43,970 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:56:44,524 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:57:02,152 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-01 23:57:02,685 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-01 23:57:04,788 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-01 23:57:04,788 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 00:00:30,511 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 00:00:30,511 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 00:00:30,522 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 00:00:38,341 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 00:00:38,341 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 00:02:10,676 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 00:02:10,676 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 00:02:10,682 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 00:02:17,106 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 00:02:17,117 - google_genai.models - INFO - AFC remote call 1 is done.
