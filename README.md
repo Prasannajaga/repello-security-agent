@@ -1,5 +1,7 @@
 # Security Agent
 
+ ⚠️**Disclaimer**: This repository may contain content or examples that are Not Safe For Work (NSFW) and are intended solely for testing and development purposes. Please review all code, documentation, and related resources thoroughly before using them in any professional, production, or public environments.
+
 Repello Security Agent is an open-source tool designed to provide real-time security monitoring and threat mitigation for AI applications. It continuously scans AI inputs/outputs to detect vulnerabilities (e.g., prompt injections or jailbreak attempts) and enforce security policies. By providing continuous monitoring and mitigation, it helps keep GenAI applications secure in real time.
 
 ## Table of Contents
