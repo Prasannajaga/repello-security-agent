@@ -2,7 +2,7 @@ from google.genai import types
 from PyPDF2 import PdfReader, PdfWriter
 from fastapi import UploadFile
 import io
-import logging
+import logging 
 
 
 logger = logging.getLogger(__name__)
@@ -12,7 +12,7 @@ logging.basicConfig(
     handlers=[
         logging.FileHandler("app/server.log"),
         logging.StreamHandler()   
-    ]
+    ] 
 )
 
 system_prompt = """
@@ -84,6 +84,8 @@ Formatting Guidelines:
 - Use the provided masking script to sanitize all extracted document text and user queries before generating your answer.
 - Never output raw document content without first applying the masking/sanitization process.
 - if you see any unsafe content in the user query or document, respond with a polite refusal to process it.
+- for example, if the user asks for a is the file safe respond with: no it's not safe and explain why it is not safe.
+
 
 Think critically about what kind of structure would best serve the user's question and generate a response accordingly — don’t blindly follow one fixed template.
 
