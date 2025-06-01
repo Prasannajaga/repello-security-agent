@@ -22,7 +22,7 @@ def read_logs():
     return {"logs": logs}
 
 origins = [
-    "http://localhost:5173",  
+    "http://localhost:5174",  
 ]
 
 app.add_middleware(

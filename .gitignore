@@ -1,9 +1,1 @@
-server/.env
-/server
-*.pyc
-*.pyc
-/server/app/__pycache__
-/server
-*.pyc
-/server/app/routes/__pycache__
-*.json
+/server/.env 
