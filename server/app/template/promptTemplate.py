@@ -3,6 +3,7 @@ from PyPDF2 import PdfReader, PdfWriter
 from fastapi import UploadFile
 import io
 import logging 
+from app.template.rag import load_rag_template
 
 
 logger = logging.getLogger(__name__)
@@ -85,6 +86,7 @@ Formatting Guidelines:
 - Never output raw document content without first applying the masking/sanitization process.
 - if you see any unsafe content in the user query or document, respond with a polite refusal to process it.
 - for example, if the user asks for a is the file safe respond with: no it's not safe and explain why it is not safe.
+- mask bad , harmfull and nsfw content when responding
 
 
 Think critically about what kind of structure would best serve the user's question and generate a response accordingly — don’t blindly follow one fixed template.
@@ -160,12 +162,14 @@ async def get_required_config(file: UploadFile, query: str) -> tuple:
     Masks sensitive information in the document text.
     """  
 
-    model = "gemini-2.0-flash"
+    model = "gemini-1.5-flash"
     contents = []
 
+    retrieval_query = await load_rag_template(file=file,query=query) 
+    print("retrived text " , retrieval_query)  
 
     if file != None: 
-        
+        file.file.seek(0)   
         content_type = "text/plain" if file.content_type.startswith("text/") else "application/pdf"
         b64Page = None 
 
@@ -175,7 +179,7 @@ async def get_required_config(file: UploadFile, query: str) -> tuple:
             b64Page = await file.read()  
         else:
             reader = get_pdf_reader(file)
-            b64Page = extract_page(reader, 0)  
+            b64Page = extract_page(reader, 0) 
 
         document_part = types.Part.from_bytes(
             data=b64Page,
@@ -187,18 +191,17 @@ async def get_required_config(file: UploadFile, query: str) -> tuple:
                 role="user",
                 parts=[ 
                     document_part,
-                    types.Part.from_text(text=query)
+                    types.Part.from_text(text=retrieval_query)
                 ]
             )  
         )
-
     else:
-        logger.info(f"No file provided, using query only -> {query}")
+        logger.info(f"No file provided, using query only -> {query}") 
         contents.append(
             types.Content(
                 role="user",
                 parts=[
-                    types.Part.from_text(text=query)
+                    types.Part.from_text(text=retrieval_query)
                 ]
             )  
         )

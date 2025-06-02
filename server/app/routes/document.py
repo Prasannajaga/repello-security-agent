@@ -2,8 +2,7 @@
 from fastapi import APIRouter, UploadFile, Form, HTTPException , File
 from typing import Optional  
 from google import genai
-from app.template.promptTemplate import get_required_config
-# from app.template.rag import load_rag_template , retrieve_rag_template
+from app.template.promptTemplate import get_required_config 
 import logging  
 from dotenv import load_dotenv
 import os
@@ -19,7 +18,7 @@ logging.basicConfig(
         logging.StreamHandler()  
     ]
 ) 
- 
+  
 
 router = APIRouter()  
 client = genai.Client(api_key=str(os.getenv("GENAI_GOOGLE_API_KEY")))   
@@ -89,10 +88,7 @@ async def upload_document(file: Optional[UploadFile] = File(None), query: str = 
     Returns the answer in JSON format, with sensitive information masked.
     Limits file size to 10MB for practicality.
     """
-    # # text = await load_rag_template(file=file)
-    # response = await retrieve_rag_template(query=query)
-    # print(f"Loaded PDF text: {response}...")  # Print first 100 characters for debugging
-    # return {"answer": response} 
+    # text = await load_rag_template(file=file)
 
     is_nsfw = check_nsfw_content(query)
     if is_nsfw:
@@ -125,9 +121,10 @@ async def upload_document(file: Optional[UploadFile] = File(None), query: str = 
 
     try:  
         if file != None: 
-            answer = await answer_query(file, query)
+            answer = await answer_query(file, query) 
         else:
-            answer = await answer_query(None, query)
+            answer = await answer_query(file=None, query=query) 
+
 
         return {"answer": answer}
     except ValueError as e:

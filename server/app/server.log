@@ -433,3 +433,134 @@
 2025-06-02 00:02:10,682 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
 2025-06-02 00:02:17,106 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
 2025-06-02 00:02:17,117 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 22:39:11,148 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:39:13,497 - app.template.promptTemplate - INFO - No file provided, using query only -> what is the title
+2025-06-02 22:39:13,497 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 22:39:14,416 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 22:39:14,430 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 22:40:29,295 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:40:30,977 - app.template.promptTemplate - INFO - No file provided, using query only -> what is the title
+2025-06-02 22:40:30,977 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 22:40:32,618 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 22:42:07,257 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:42:10,756 - app.template.promptTemplate - INFO - No file provided, using query only -> what is the title ?
+2025-06-02 22:42:10,759 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 22:42:11,778 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 22:42:11,778 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 22:42:46,706 - app.template.promptTemplate - INFO - No file provided, using query only -> show  the first 5 user detail
+2025-06-02 22:42:46,708 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 22:42:49,080 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 22:42:49,084 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 22:46:06,746 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 22:46:08,301 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:46:11,136 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 22:46:11,136 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 22:48:39,169 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 22:48:40,483 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:48:43,140 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 22:48:43,140 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 22:56:56,376 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 22:56:57,216 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:57:17,746 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 22:57:17,746 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 22:58:14,034 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 22:58:15,467 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 22:58:17,937 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 22:58:17,937 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 22:59:56,294 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 22:59:56,296 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 22:59:56,548 - app.routes.document - ERROR - Error in get_required_config: Cannot read an empty file
+2025-06-02 23:01:17,535 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 23:01:17,536 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 23:01:18,102 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:01:19,932 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:01:22,643 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:04:19,093 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:04:19,095 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:04:19,096 - app.routes.document - ERROR - Error in get_required_config: local variable 'retrieval_query' referenced before assignment
+2025-06-02 23:05:30,632 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:05:30,632 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:05:30,766 - pypdf._reader - WARNING - invalid pdf header: b'Invoi'
+2025-06-02 23:05:30,767 - pypdf._reader - WARNING - EOF marker not found
+2025-06-02 23:05:30,767 - app.routes.document - ERROR - Error in get_required_config: Stream has ended unexpectedly
+2025-06-02 23:08:24,462 - app.routes.document - INFO - Received file: upload, type: application/pdf
+2025-06-02 23:08:24,465 - app.template.promptTemplate - INFO - Processing file: upload, type: application/pdf
+2025-06-02 23:08:25,116 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:08:27,793 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:08:30,518 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:11:05,640 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:11:05,640 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:11:05,936 - pypdf._reader - WARNING - invalid pdf header: b'Invoi'
+2025-06-02 23:11:05,937 - pypdf._reader - WARNING - EOF marker not found
+2025-06-02 23:11:05,937 - app.routes.document - ERROR - Error in get_required_config: Stream has ended unexpectedly
+2025-06-02 23:12:23,826 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:12:23,828 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:12:23,828 - app.routes.document - ERROR - Error in get_required_config: local variable 'temp_path' referenced before assignment
+2025-06-02 23:13:33,602 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:13:33,603 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:13:34,799 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:13:42,124 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:13:43,048 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:18:54,997 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:18:54,998 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:18:57,209 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:18:59,477 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:21:13,328 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:21:13,328 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:21:15,138 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:21:16,956 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:29:05,806 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:29:05,806 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:29:08,698 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:29:10,433 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-06-02 23:29:53,668 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:29:53,668 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:29:54,067 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:29:56,876 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:29:58,492 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:29:58,500 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:30:17,823 - app.template.promptTemplate - INFO - No file provided, using query only -> ok show the details
+2025-06-02 23:30:17,823 - app.routes.document - ERROR - Error in get_required_config: 'NoneType' object has no attribute 'file'
+2025-06-02 23:33:38,756 - app.routes.document - ERROR - Error in get_required_config: Chroma.__init__() got an unexpected keyword argument 'embedding'
+2025-06-02 23:34:25,276 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:34:27,217 - app.routes.document - ERROR - Error in get_required_config: 'NoneType' object has no attribute 'file'
+2025-06-02 23:35:34,352 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:35:36,187 - app.template.promptTemplate - INFO - No file provided, using query only -> ok show the details of the user
+2025-06-02 23:35:36,191 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:35:38,568 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:35:38,570 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:36:51,269 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:36:53,026 - app.template.promptTemplate - INFO - No file provided, using query only -> ok show the details of the user
+2025-06-02 23:36:53,030 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:36:55,312 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:36:55,315 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:38:23,502 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:38:25,887 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:38:25,893 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:38:28,746 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:38:28,750 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:38:39,926 - app.template.promptTemplate - INFO - No file provided, using query only -> ok mask the user just show me
+2025-06-02 23:38:39,933 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:38:42,096 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:38:42,102 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:39:04,417 - app.template.promptTemplate - INFO - No file provided, using query only -> what is the tite of ?
+2025-06-02 23:39:04,419 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:39:06,747 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:39:06,749 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:48:19,558 - app.routes.document - ERROR - Error in get_required_config: Chroma.delete_collection() missing 1 required positional argument: 'self'
+2025-06-02 23:49:37,275 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:49:37,762 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:49:41,247 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:49:41,247 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:49:43,876 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:49:43,880 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:50:49,903 - app.routes.document - INFO - Received file: test_invoices.txt, type: text/plain
+2025-06-02 23:50:51,079 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-06-02 23:50:54,585 - app.template.promptTemplate - INFO - Processing file: test_invoices.txt, type: text/plain
+2025-06-02 23:50:54,588 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:50:57,497 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:50:57,497 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-06-02 23:51:13,558 - app.template.promptTemplate - INFO - No file provided, using query only -> mask it if require just return user
+2025-06-02 23:51:13,562 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-06-02 23:51:15,846 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-06-02 23:51:15,852 - google_genai.models - INFO - AFC remote call 1 is done.
