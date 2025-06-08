@@ -313,7 +313,7 @@ VITE_PORT=5173
 
 ## **Final Thoughts**
 
-Thanks to RepelloAI for giving me this opportunity — it truly pushed me beyond the comfort zone. This project tested my ability to think fast, build faster, and stay focused under pressure. From wrangling APIs to building a privacy-first document agent with masking and image-based PDF handling — every part of this build was a learning milestone.
+Thanks to RepelloAI for giving me this opportunity it truly pushed me beyond the comfort zone. This project tested my ability to think fast, build faster, and stay focused under pressure. From wrangling APIs to building a privacy-first document agent with masking and image-based PDF handling every part of this build was a learning milestone.
 
 I'm genuinely proud of where my skills stand today.
 
